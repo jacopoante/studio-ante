@@ -63,3 +63,113 @@ footer {
 .btn:hover {
   background-color: #0077e6;
 }
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  section {
+    padding: 1rem;
+    margin: 1rem;
+  }
+  header {
+    padding: 3rem 1rem;
+  }
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  nav a {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+/* Gradienti e colori migliorati */
+body {
+  background: linear-gradient(to bottom right, #e6f0ff, #ffffff);
+}
+
+header {
+  background: linear-gradient(rgba(0,0,64,0.6), rgba(0,0,64,0.6)), url("img/hero.jpg") no-repeat center center/cover;
+}
+
+nav {
+  background: linear-gradient(to right, #003366, #0059b3);
+}
+
+footer {
+  background: linear-gradient(to right, #003366, #0059b3);
+}
+
+.btn {
+  background: linear-gradient(to right, #0059b3, #0077e6);
+}
+
+.btn:hover {
+  background: linear-gradient(to right, #0077e6, #3399ff);
+}
+
+/* Responsive Design migliorato */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  section {
+    padding: 1rem;
+    margin: 1rem;
+  }
+  header {
+    padding: 3rem 1rem;
+  }
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  nav a {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+/* Animazioni leggere */
+section {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+section:hover {
+  transform: scale(1.01);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+img {
+  transition: transform 0.3s ease;
+}
+img:hover {
+  transform: scale(1.03);
+}
+
+.btn {
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Nav animation */
+nav a {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
