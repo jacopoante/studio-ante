@@ -7,32 +7,27 @@
   <meta name="description" content="Studio Ante & C.: Perizie danni auto, immobili, sinistri stradali a Taranto. Consulenze tecniche, CTU, CTP. Esperienza e affidabilità dal 2002."/>
   <meta name="keywords" content="perizie assicurative Taranto, perito danni auto Taranto, consulente tecnico Taranto, CTU sinistri Taranto, ricostruzione sinistri stradali, perito incidenti, stime immobiliari Taranto, valutazioni pre-acquisto auto, perizie incendio allagamento"/>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <style>
     .flip-container {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
       margin-top: 2rem;
       padding-bottom: 2rem;
     }
     .flip-card {
       background-color: transparent;
-      width: 100%;
       perspective: 1000px;
-    }
-    .card-toggle {
-      display: none;
+      cursor: pointer;
     }
     .flip-card-inner {
       position: relative;
       width: 100%;
-      height: 270px;
+      height: 320px;
       transform-style: preserve-3d;
-      transition: transform 0.6s;
+      transition: transform 0.6s ease;
     }
-    .card-toggle:checked + .flip-card-inner,
-    .flip-card:hover .flip-card-inner {
+    .flipped .flip-card-inner {
       transform: rotateY(180deg);
     }
     .flip-card-front, .flip-card-back {
@@ -40,31 +35,31 @@
       width: 100%;
       height: 100%;
       backface-visibility: hidden;
-      border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       padding: 1rem;
       background: white;
-    }
-    .flip-card-front {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      font-weight: 600;
-      background-color: #003366;
-      color: white;
       text-align: center;
     }
+    .flip-card-front {
+      background-color: #003366;
+      color: white;
+    }
     .flip-card-front img {
-      width: 80px;
-      height: 80px;
+      width: 100px;
+      height: 100px;
       object-fit: cover;
-      border-radius: 6px;
+      border-radius: 8px;
       margin-bottom: 1rem;
     }
     .flip-card-back {
       transform: rotateY(180deg);
       color: #333;
+      background: #f9f9f9;
     }
   </style>
 </head>
@@ -83,69 +78,76 @@
     <h2>Servizi Principali</h2>
     <div class="flip-container">
       <div class="flip-card">
-        <input type="checkbox" id="card1" class="card-toggle">
-        <label for="card1" class="flip-card-inner">
+        <div class="flip-card-inner">
           <div class="flip-card-front">
-            <img src="img/perizia-auto.jpg" alt="Perizia danni auto" />
+            <img src="img/perizia-auto.jpg" alt="Perizia danni auto">
             <span>Perizie danni auto</span>
           </div>
-          <div class="flip-card-back">Valutazione tecnica di veicoli danneggiati per sinistri stradali a fini assicurativi.</div>
-        </label>
+          <div class="flip-card-back">
+            Valutazione tecnica di veicoli danneggiati per sinistri stradali a fini assicurativi.
+          </div>
+        </div>
       </div>
       <div class="flip-card">
-        <input type="checkbox" id="card2" class="card-toggle">
-        <label for="card2" class="flip-card-inner">
+        <div class="flip-card-inner">
           <div class="flip-card-front">
-            <img src="img/consulenza-legale.jpg" alt="Consulenza CTP" />
+            <img src="img/consulenza-legale.jpg" alt="Consulenze CTP">
             <span>Consulenze CTP</span>
           </div>
-          <div class="flip-card-back">Assistenza tecnica in contenziosi civili e sinistri come Consulente di Parte.</div>
-        </label>
+          <div class="flip-card-back">
+            Assistenza tecnica in contenziosi civili e sinistri come Consulente di Parte.
+          </div>
+        </div>
       </div>
       <div class="flip-card">
-        <input type="checkbox" id="card3" class="card-toggle">
-        <label for="card3" class="flip-card-inner">
+        <div class="flip-card-inner">
           <div class="flip-card-front">
-            <img src="img/tribunale.jpg" alt="CTU in tribunale" />
+            <img src="img/tribunale.jpg" alt="Incarichi CTU">
             <span>Incarichi CTU</span>
           </div>
-          <div class="flip-card-back">Consulenze peritali su incarico del Tribunale di Taranto e provincia.</div>
-        </label>
+          <div class="flip-card-back">
+            Consulenze peritali su incarico del Tribunale di Taranto e provincia.
+          </div>
+        </div>
       </div>
       <div class="flip-card">
-        <input type="checkbox" id="card4" class="card-toggle">
-        <label for="card4" class="flip-card-inner">
+        <div class="flip-card-inner">
           <div class="flip-card-front">
-            <img src="img/ricostruzione-sinistro.jpg" alt="Ricostruzione sinistro" />
+            <img src="img/ricostruzione-sinistro.jpg" alt="Ricostruzione sinistri">
             <span>Ricostruzione sinistri</span>
           </div>
-          <div class="flip-card-back">Analisi dinamica degli incidenti con software specialistici e modelli fisici.</div>
-        </label>
+          <div class="flip-card-back">
+            Analisi dinamica degli incidenti con software specialistici e modelli fisici.
+          </div>
+        </div>
       </div>
       <div class="flip-card">
-        <input type="checkbox" id="card5" class="card-toggle">
-        <label for="card5" class="flip-card-inner">
+        <div class="flip-card-inner">
           <div class="flip-card-front">
-            <img src="img/stima-beni.jpg" alt="Stima beni" />
+            <img src="img/stima-beni.jpg" alt="Stime e inventari">
             <span>Stime e inventari</span>
           </div>
-          <div class="flip-card-back">Valutazioni patrimoniali dettagliate per successioni, divisioni e assicurazioni.</div>
-        </label>
+          <div class="flip-card-back">
+            Valutazioni patrimoniali dettagliate per successioni, divisioni e assicurazioni.
+          </div>
+        </div>
       </div>
       <div class="flip-card">
-        <input type="checkbox" id="card6" class="card-toggle">
-        <label for="card6" class="flip-card-inner">
+        <div class="flip-card-inner">
           <div class="flip-card-front">
-            <img src="img/pre-acquisto.jpg" alt="Valutazione pre-acquisto" />
+            <img src="img/pre-acquisto.jpg" alt="Valutazioni pre-acquisto">
             <span>Valutazioni pre-acquisto</span>
           </div>
-          <div class="flip-card-back">Controlli tecnici su immobili e auto usate prima dell'acquisto per evitare sorprese.</div>
-        </label>
+          <div class="flip-card-back">
+            Controlli tecnici su immobili e auto usate prima dell'acquisto per evitare sorprese.
+          </div>
+        </div>
       </div>
     </div>
   </section>
   <footer>
     <p>&copy; 2025 Studio Ante & C.</p>
   </footer>
+  <script src="flipcards.js"></script>
 </body>
 </html>
