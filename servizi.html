@@ -1,16 +1,65 @@
-
 <!DOCTYPE html>
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Servizi – Studio Ante & C.</title>
+  <title>Perizie Assicurative Taranto – Studio Ante & C.</title>
+  <meta name="description" content="Studio Ante & C.: Perizie danni auto, immobili, sinistri stradali a Taranto. Consulenze tecniche, CTU, CTP. Esperienza e affidabilità dal 2002."/>
+  <meta name="keywords" content="perizie assicurative Taranto, perito danni auto Taranto, consulente tecnico Taranto, CTU sinistri Taranto, ricostruzione sinistri stradali, perito incidenti, stime immobiliari Taranto, valutazioni pre-acquisto auto, perizie incendio allagamento"/>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    .flip-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2.5rem;
+      margin-top: 2rem;
+      padding-bottom: 2rem;
+    }
+    .flip-card {
+      background-color: transparent;
+      width: 100%;
+      perspective: 1000px;
+    }
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 250px;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+    }
+    .flip-card:hover .flip-card-inner,
+    .flip-card:focus-within .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+    .flip-card-front, .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 1rem;
+      background: white;
+    }
+    .flip-card-front {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      background-color: #003366;
+      color: white;
+    }
+    .flip-card-back {
+      transform: rotateY(180deg);
+      color: #333;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>I nostri Servizi</h1>
+    <h1>Studio Ante & C.</h1>
+    <p>Perizie Assicurative e Consulenze Tecniche a Taranto</p>
   </header>
   <nav>
     <a href="index.html">Home</a>
@@ -19,16 +68,48 @@
     <a href="contatti.html">Contatti</a>
   </nav>
   <section>
-    <h2>Perizie assicurative</h2>
-    <p>Valutazioni tecniche per danni a veicoli, immobili, beni aziendali, incendi e allagamenti. Forniamo documentazione completa, imparziale e utilizzabile a fini assicurativi o legali.</p>
-    <img src="img/perizia-auto.jpg" alt="Auto danneggiata da sinistro" />
-
-    <h2>Consulenze Tecniche di Parte (CTP)</h2>
-    <p>Supporto tecnico in controversie civili, mediazioni e arbitrati. Lavoriamo a fianco di avvocati e privati per tutelare gli interessi del cliente con competenza ed equilibrio.</p>
-
-    <h2>Incarichi giudiziari</h2>
-    <p>Disponibili per incarichi come CTU nei Tribunali di Taranto e provincia. Offriamo consulenze peritali per il supporto alla magistratura o per parti in causa.</p>
+    <h2>Servizi Principali</h2>
+    <div class="flip-container">
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Perizie danni auto</div>
+          <div class="flip-card-back">Valutazione tecnica di veicoli danneggiati per sinistri stradali a fini assicurativi.</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Consulenze CTP</div>
+          <div class="flip-card-back">Assistenza tecnica in contenziosi civili e sinistri come Consulente di Parte.</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Incarichi CTU</div>
+          <div class="flip-card-back">Consulenze peritali su incarico del Tribunale di Taranto e provincia.</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Ricostruzione sinistri</div>
+          <div class="flip-card-back">Analisi dinamica degli incidenti con software specialistici e modelli fisici.</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Stime e inventari</div>
+          <div class="flip-card-back">Valutazioni patrimoniali dettagliate per successioni, divisioni e assicurazioni.</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Valutazioni pre-acquisto</div>
+          <div class="flip-card-back">Controlli tecnici su immobili e auto usate prima dell'acquisto per evitare sorprese.</div>
+        </div>
+      </div>
+    </div>
   </section>
-  <footer><p>&copy; 2025 Studio Ante & C.</p></footer>
+  <footer>
+    <p>&copy; 2025 Studio Ante & C.</p>
+  </footer>
 </body>
 </html>
