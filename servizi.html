@@ -21,15 +21,18 @@
       width: 100%;
       perspective: 1000px;
     }
+    .card-toggle {
+      display: none;
+    }
     .flip-card-inner {
       position: relative;
       width: 100%;
-      height: 250px;
-      transition: transform 0.6s;
+      height: 270px;
       transform-style: preserve-3d;
+      transition: transform 0.6s;
     }
-    .flip-card:hover .flip-card-inner,
-    .flip-card:focus-within .flip-card-inner {
+    .card-toggle:checked + .flip-card-inner,
+    .flip-card:hover .flip-card-inner {
       transform: rotateY(180deg);
     }
     .flip-card-front, .flip-card-back {
@@ -44,11 +47,20 @@
     }
     .flip-card-front {
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       font-weight: 600;
       background-color: #003366;
       color: white;
+      text-align: center;
+    }
+    .flip-card-front img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 6px;
+      margin-bottom: 1rem;
     }
     .flip-card-back {
       transform: rotateY(180deg);
@@ -71,40 +83,64 @@
     <h2>Servizi Principali</h2>
     <div class="flip-container">
       <div class="flip-card">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">Perizie danni auto</div>
+        <input type="checkbox" id="card1" class="card-toggle">
+        <label for="card1" class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="img/perizia-auto.jpg" alt="Perizia danni auto" />
+            <span>Perizie danni auto</span>
+          </div>
           <div class="flip-card-back">Valutazione tecnica di veicoli danneggiati per sinistri stradali a fini assicurativi.</div>
-        </div>
+        </label>
       </div>
       <div class="flip-card">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">Consulenze CTP</div>
+        <input type="checkbox" id="card2" class="card-toggle">
+        <label for="card2" class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="img/consulenza-legale.jpg" alt="Consulenza CTP" />
+            <span>Consulenze CTP</span>
+          </div>
           <div class="flip-card-back">Assistenza tecnica in contenziosi civili e sinistri come Consulente di Parte.</div>
-        </div>
+        </label>
       </div>
       <div class="flip-card">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">Incarichi CTU</div>
+        <input type="checkbox" id="card3" class="card-toggle">
+        <label for="card3" class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="img/tribunale.jpg" alt="CTU in tribunale" />
+            <span>Incarichi CTU</span>
+          </div>
           <div class="flip-card-back">Consulenze peritali su incarico del Tribunale di Taranto e provincia.</div>
-        </div>
+        </label>
       </div>
       <div class="flip-card">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">Ricostruzione sinistri</div>
+        <input type="checkbox" id="card4" class="card-toggle">
+        <label for="card4" class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="img/ricostruzione-sinistro.jpg" alt="Ricostruzione sinistro" />
+            <span>Ricostruzione sinistri</span>
+          </div>
           <div class="flip-card-back">Analisi dinamica degli incidenti con software specialistici e modelli fisici.</div>
-        </div>
+        </label>
       </div>
       <div class="flip-card">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">Stime e inventari</div>
+        <input type="checkbox" id="card5" class="card-toggle">
+        <label for="card5" class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="img/stima-beni.jpg" alt="Stima beni" />
+            <span>Stime e inventari</span>
+          </div>
           <div class="flip-card-back">Valutazioni patrimoniali dettagliate per successioni, divisioni e assicurazioni.</div>
-        </div>
+        </label>
       </div>
       <div class="flip-card">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">Valutazioni pre-acquisto</div>
+        <input type="checkbox" id="card6" class="card-toggle">
+        <label for="card6" class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="img/pre-acquisto.jpg" alt="Valutazione pre-acquisto" />
+            <span>Valutazioni pre-acquisto</span>
+          </div>
           <div class="flip-card-back">Controlli tecnici su immobili e auto usate prima dell'acquisto per evitare sorprese.</div>
-        </div>
+        </label>
       </div>
     </div>
   </section>
